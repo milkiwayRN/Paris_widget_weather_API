@@ -1,0 +1,265 @@
+html {
+  font-size: 15px;
+}
+
+.widget_paris_bg {
+  background-image: url("widget_paris/Light source_wdgt_prs.png");
+  background-size: 100% 100%;
+  font-family: 'Lato',sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 53.33rem;
+  height: 40rem;
+  color: white;
+  margin: auto;
+}
+
+.widget_paris {
+  background-image: url("widget_paris/paris.png");
+  background-size: 100% 100%;
+  position: relative;
+  width: 46.4rem;
+  height: 29rem;
+  left: 3.73rem;
+  top: 4.6rem;
+  display: grid;
+  grid-template-columns: 1fr auto  4.66rem;
+  grid-template-rows: 5.33rem  1fr 7.2rem;
+  grid-template-areas: "search . ."
+                     ".  weather ."
+                     "bar bar bar";
+
+}
+
+.widget_paris_sidebar {
+  background: rgba(0,0,0,0.3);
+  height: 7.2rem;
+  width: 100%;
+  grid-area: bar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.widget_paris_sidebar > button  {
+  border: none;
+  padding: 0rem;
+}
+
+.widget_paris_sidebar > button:focus {
+  outline: none;
+}
+
+.widget_paris_button_prev {
+  background: none;
+  background-image: url("widget_paris/Back_wdgt_prs.png");
+  background-size: 100% 100%;
+  height: 1.26rem;
+  width: 0.73rem;
+}
+
+.widget_paris_button_next {
+  background: none;
+  background-image: url("widget_paris/Next_wdgt_prs.png");
+  background-size: 100% 100%;
+  height: 1.26rem;
+  width: 0.8rem;
+}
+
+.widget_paris_sidebar_list_predictions {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  list-style-type: none;
+  align-self: stretch;
+  margin: 0rem;
+  padding: 0rem;
+  /*border: 1px solid yellow;*/
+}
+
+.widget_paris_sidebar_list_predictions > li {
+
+  width: 8.53rem;
+  margin: 0.86rem 0rem;
+  box-sizing: border-box;
+  padding: 0rem;
+  border-right: 1px solid #9c9695;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /*border: 1px solid white;*/
+}
+
+.widget_paris_sidebar_list_predictions > li:last-child {
+  border: none;
+}
+
+.icon_lp {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rain {
+  background-image: url("widget_paris/Rain_wdgt_prs.png");
+  height: 2.53rem;
+  width: 2.4rem;
+}
+
+.cloudy {
+  background-image: url("widget_paris/Cloudy_wdgt_prs.png");
+  height: 1.67rem;
+  width: 2.73rem;
+}
+
+.sunny {
+  background-image: url("widget_paris/Sunny_wdgt_prs.png");
+  height: 2.33rem;
+  width: 2.46rem;
+}
+
+.overcast {
+  background-image: url("widget_paris/Overcast_wdgt_prs.png");
+  height: 2.33rem;
+  width: 3.2rem;
+}
+
+.icon_wind {
+  display: inline-block;
+  background-image: url("widget_paris/Wind_wdgt_prs.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2.86rem;
+  height: 1.8rem;
+
+}
+
+.widget_paris_weather_infobar {
+  grid-area: weather;
+  display: flex;
+  /*border: 1px solid black;*/
+}
+
+.widget_paris_date {
+  width: auto;
+  text-align: center;
+  line-height: 0.5em;
+  /*border:1px solid yellow;*/
+}
+
+.widget_paris_about_weather{
+  width: auto;
+  /*border: 1px solid green;*/
+}
+
+.widget_paris_span_day_of_week {
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+.widget_paris_span_date {
+  font-size: 0.93em;
+
+}
+
+.widget_paris_span_temp {
+  font-size: 6.13em;
+  line-height: 0.8em;
+  font-weight: 900;
+  text-align: center;
+
+}
+
+.widget_paris_span_location {
+  font-size: 1.46em;
+  padding-left: 0.33em;
+  line-height: 2em;
+}
+
+.widget_paris_span_wind_speed {
+  font-size: 2em;
+  font-weight: 700;
+  padding-left: 0.33em;
+  line-height: 1.5em;
+}
+
+.widget_paris_span_unit {
+  font-size: 0.86em;
+  font-weight:700;
+}
+
+.widget_paris_search {
+  grid-area: search;
+  padding: 10px 20px;
+}
+.widget_paris_search_button{
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  border: none;
+}
+.widget_paris_search_input{
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+
+  .widget_paris_bg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .widget_paris {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    top: 0;
+    left: 0;
+    grid-template-columns: 8rem 1fr  auto;
+    grid-template-rows: auto  1fr 1fr;
+    grid-template-areas: "bar . weather"
+                       "bar  . search"
+                       "bar . .";
+  }
+
+  .widget_paris_weather_infobar {
+    background: rgba(0,0,0,0.3);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .widget_paris_date{
+    margin-bottom: 1em;
+  }
+
+  .widget_paris_sidebar {
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+  }
+
+  .widget_paris_sidebar_list_predictions {
+    flex-direction: column;
+    width: 6rem;
+    align-items: center;
+    margin: 1rem 1rem;
+
+  }
+
+  .widget_paris_sidebar_list_predictions > li {
+    margin: 0;
+    height: 5.53rem;
+    width: 6rem;
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+
+  .widget_paris_sidebar > button {
+    transform: rotate(90deg);
+  }
+
+}
